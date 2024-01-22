@@ -30,7 +30,7 @@ int  main()
     cin>>iSize;
     int iPosition=0;
 
-    int iArray[iSize];
+    int* iArray = new int[iSize]; // Dynamic memory allocation
     int iValue=0;
 
     cout<<"Enter the Array elements:"<<endl;
@@ -57,6 +57,9 @@ int  main()
     {   
         cout<<"Element found at Position:"<<iPosition<<endl;
     }
+
+
+    delete[] iArray; // Release allocated memory
     return 0;
 
 }
